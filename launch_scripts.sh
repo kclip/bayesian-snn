@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-#SBATCH --nodes=1
-#SBATCH --partition=nmes_simeone
-#SBATCH --job-name=mnistdvs-continual
-#SBATCH --time=120:00:00
-
-module load cuda/11.4.2-gcc-9.4.0
-
 ### Two-moons
 # Bayesian real-valued
 python -m scripts.bayesian.offline.twomoons_decolle --lr=0.01 --home=/scratch/users/k1804053 --rho=0.01 --fixed_prec
